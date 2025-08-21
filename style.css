@@ -39,6 +39,10 @@ a {
   align-items: center;
 }
 
+.flex-as-c {
+  align-self: center;
+}
+
 .flex-grow-1 {
   flex-grow: 1;
 }
@@ -59,4 +63,17 @@ a {
 .img-box > img {
   width: 100%;
   display: block;
+}
+
+/* 커스텀 */
+.con-min-width {
+  min-width: 1080px;
+}
+
+.con {
+  width: 1080px;
+}
+
+::selection {
+  background-color: #ffe400;
 }
