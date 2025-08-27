@@ -580,18 +580,27 @@
   </style>
 
   <script>
-    $('.dropBtn').click(function() {
-      var dropdownContent = $('.dropdown_content');
-      var $this = $(this);
+    var $dropBtn = $('.dropBtn');
+    var $dropdownContent = $('.dropdown_content');
 
-      if (dropdownContent.hasClass('is_active')) {
-        dropdownContent.removeClass('is_active');
-        $this.removeClass('rotate');
-      } else {
-        dropdownContent.addClass('is_active'); 
-        $this.addClass('rotate');
+    $dropBtn.click(function() {
+      $dropdownContent.toggleClass('is_active');
+      $dropBtn.toggleClass('rotate');
+    });
+
+    $(window).click(function(event) {
+      if ( !$(event.target).closest('.dropBtn').length ) {
+        $dropdownContent.removeClass('is_active');
+        $dropBtn.removeClass('rotate');
       }
-    })
+    });
+
+    $('header .menu_box > ul > li').mouseenter(function() {
+        $dropdownContent.removeClass('is_active');
+        $dropBtn.removeClass('rotate');
+    });
+
+
   </script>
 </body>
 </html>
