@@ -110,6 +110,7 @@ header {
   top: 0;
   left: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 /* 로고 */
@@ -306,6 +307,7 @@ header .global_logo:hover > img {
 /* ------------- 메인배너 시작 ------------- */
 .main_banner {
   position: relative;
+  margin-top: 80px;
 }
 
 .main_banner .banner_img {
@@ -873,8 +875,9 @@ header .global_logo:hover > img {
 /* ------------- IT 기술 박스 시작 ------------- */
 .itskill_box {
   background-color: #f9f9f9;
-  padding-bottom: 230px;
+  padding-bottom: 110px;
   padding-top: 160px;
+  position: relative;
 }
 
 .itskill_box h3 {
@@ -952,8 +955,7 @@ footer .box_1 > .menu_box > ul > li {
 
 footer .box_1 > .menu_box > ul > li:not(:first-child)::after {
   content: "";
-  background-color: #000;
-  /* #d8d8d8 */
+  background-color: #d8d8d8;
   width: 1px;
   height: 10px;
   position: absolute;
